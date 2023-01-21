@@ -1,3 +1,89 @@
 #todays-city {
     margin-bottom: 1em;
 }
+
+:root {
+    --yellow: #FFB703;
+    --orange: #FB8500;
+    --darkblue: #023047;
+    --blue: #219EBC;
+    --lightblue: #8ECAE6;
+}
+
+#dividing-line {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--darkblue);
+}
+
+#box1 {
+  
+    background-color: var(--yellow);
+}
+
+#box2 {
+  
+    background-color: var(--yellow);
+}
+
+#box3 {
+
+    background-color: var(--yellow);
+}
+
+#box4 {
+    
+    background-color: var(--yellow);
+}
+
+#box5 {
+    margin: 0px 0px 24px;
+    background-color: var(--yellow);
+}
+
+
+
+#search-button {
+    margin-top: 2px;
+    color: white;
+    background-color: var(--darkblue);
+}
+
+#todays-city {
+    border: solid;
+    border-color: var(--darkblue);
+    border-width: 1%;
+    border-radius: 10px;
+}
+
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+.button {
+    font-family: 'Roboto Slab', serif;
+}
+
+#button-one {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-two {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-three {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-four {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+
+#header {
+    background-color: var(--blue);
+    color: antiquewhite;
+}

@@ -8,54 +8,73 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/js/reset.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/js/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 
-<body class="container is-family-primary">
-    <div class="columns is-vcentered has-background-info">
-        <header class="column is-full has-text-centered has-text-light" id="header">
-            <h1 class="content is-size-1 has-text-weight-bold has-text-light">Weather Voyage</h1>
+<body class="container">
+    <div class="columns is-vcentered" id="header">
+        <header class="column is-full has-text-centered" id="header">
+            <h1 class="content is-size-1 has-text-weight-bold">Weather Voyage</h1>
             <p class="content is-size-4">Where would you like to go?</p>
         </header>
     </div>
 
     <main>
         <div class="columns">
-            <aside class="tile is-vertical is-2 is-fluid">
-                <h2>Search for a City:</h2>
+            <aside class="tile is-vertical is-2 is-fluid mx-3">
+                <h2 class="is-size-4">Search for a City:</h2>
                 <input type="text" placeholder="Where will you go next?">
-                <button type="submit" class="button has-text-centered is-info">Search</button>
-                <button class="button has-text-centered is-info is-outlined" id="button-one">Austin</button>
-                <button class="button has-text-centered is-info is-outlined" id="button-two">Denver</button>
-                <button class="button has-text-centered is-info is-outlined" id="button-three">Milwaukee</button>
-                <button class="button has-text-centered is-info is-outlined" id="button-four">Indianapolis</button>
+                <button id="search-button" type="submit" class="button has-text-centered">Search</button>
+                <hr class="solid" id="dividing-line">
+                <button class="button city-buttons has-text-centered is-outlined" id="button-one">Austin</button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-two">Denver</button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-three">Milwaukee</button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-four">Indianapolis</button>
             </aside>
 
-            <div class="column">
-                <div id="todays-city ">
-                    <h1>Atlanta (9/13/2022) &#127780;</h1>
-                    <p>Temp: 76F</p>
-                    <p>Wind: 8.43 MPH</p>
-                    <p>Humidity: 44%</p>
+            <div class="column is-bordered">
+                <div id="todays-city">
+                    <h1 class="is-size-3 has-text-weight-bold ml-2">Atlanta (9/13/2022) &#127780;</h1>
+                    <p class="my-2 ml-2">Temp: 76F</p>
+                    <p class="my-2 ml-2">Wind: 8.43 MPH</p>
+                    <p class="my-2 ml-2">Humidity: 44%</p>
                 </div>
 
 
 
-                <h3 class="column">5-Day Forecast</h3>
-                <div class="columns is-full box-wrapper">
-                    <div class="box column is-1" id="box1">
-                        Box1
+                <h3 class="column is-size-3 mt-2">5-Day Forecast</h3>
+                <div class="columns box-wrapper">
+                    <div class="box column mr-1" id="box1">
+                        <h2 class="is-size-4">Date</h2>
+                        <p>Temp</p>
+                        <p>Wind</p>
+                        <p>Humidity</p>
                     </div>
-                    <div class="box column is-1" id="box2">
-                        Box2
+                    <div class="box column mr-1" id="box2">
+                        <h2 class="is-size-4">Date</h2>
+                        <p>Temp</p>
+                        <p>Wind</p>
+                        <p>Humidity</p>
                     </div>
-                    <div class="box column is-1" id="box3">
-                        Box3
+                    <div class="box column mr-1" id="box3">
+                        <h2 class="is-size-4">Date</h2>
+                        <p>Temp</p>
+                        <p>Wind</p>
+                        <p>Humidity</p>
                     </div>
-                    <div class="box column is-1" id="box4">
-                        Box4
+                    <div class="box column mr-1" id="box4">
+                        <h2 class="is-size-4">Date</h2>
+                        <p>Temp</p>
+                        <p>Wind</p>
+                        <p>Humidity</p>
                     </div>
-                    <div class="box column is-1" id="box5">
-                        Box5
+                    <div class="box column mr-1" id="box5">
+                        <h2 class="is-size-4">Date</h2>
+                        <p>Temp</p>
+                        <p>Wind</p>
+                        <p>Humidity</p>
                     </div>
                 </div>
 
