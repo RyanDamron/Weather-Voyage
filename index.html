@@ -12,7 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
 </head>
 
 <body class="container">
@@ -28,7 +32,7 @@
         <div class="columns">
             <aside class="tile is-vertical is-2 is-fluid mx-3">
                 <h2 class="is-size-4">Search for a City:</h2>
-                <input type="text" placeholder="Where will you go next?">
+                <input id="user-input" type="text" placeholder="Where will you go next?">
                 <button id="search-button" type="submit" class="button has-text-centered">Search</button>
                 <hr class="solid" id="dividing-line">
                 <button class="button city-buttons has-text-centered is-outlined" id="button-one">Austin</button>
@@ -41,10 +45,10 @@
 
             <div class="column is-bordered">
                 <div id="todays-city">
-                    <h1 class="is-size-3 has-text-weight-bold ml-2">Atlanta (9/13/2022) &#127780;</h1>
-                    <p class="my-2 ml-2">Temp: 76F</p>
-                    <p class="my-2 ml-2">Wind: 8.43 MPH</p>
-                    <p class="my-2 ml-2">Humidity: 44%</p>
+                    <h1 id="city-name-date" class="is-size-3 has-text-weight-bold ml-2"></h1>
+                    <p id="today-temp" class="my-2 ml-2"></p>
+                    <p id="today-wind" class="my-2 ml-2"></p>
+                    <p id="today-humid" class="my-2 ml-2"></p>
                 </div>
 
 
@@ -90,3 +94,4 @@
 </body>
 
 </html>
+
