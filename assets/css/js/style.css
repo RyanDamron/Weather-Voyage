@@ -66,10 +66,17 @@
     font-family: 'Roboto Slab', serif;
 }
 
+#button {
+    font-family: 'Roboto Slab', serif;
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+
 #button-one {
     color: var(--darkblue);
     background-color: var(--lightblue);
 }
+
 #button-two {
     color: var(--darkblue);
     background-color: var(--lightblue);
@@ -79,6 +86,30 @@
     background-color: var(--lightblue);
 }
 #button-four {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-five {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-six {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-seven {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-eight {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-nine {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+}
+#button-ten {
     color: var(--darkblue);
     background-color: var(--lightblue);
 }

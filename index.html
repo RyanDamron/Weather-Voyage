@@ -30,15 +30,22 @@
     <main>
 
         <div class="columns">
-            <aside class="tile is-vertical is-2 is-fluid mx-3">
+            <aside class="tile is-vertical is-2 is-fluid mx-3" id="search-bar">
                 <h2 class="is-size-4">Search for a City:</h2>
                 <input id="user-input" type="text" placeholder="Where will you go next?">
                 <button id="search-button" type="submit" class="button has-text-centered">Search</button>
                 <hr class="solid" id="dividing-line">
-                <button class="button city-buttons has-text-centered is-outlined" id="button-one">Austin</button>
-                <button class="button city-buttons has-text-centered is-outlined" id="button-two">Denver</button>
-                <button class="button city-buttons has-text-centered is-outlined" id="button-three">Milwaukee</button>
-                <button class="button city-buttons has-text-centered is-outlined" id="button-four">Indianapolis</button>
+                <!-- <button class="button city-buttons has-text-centered is-outlined" id="button-one"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-two"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-three"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-four"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-five"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-six"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-seven"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-eight"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-nine"></button>
+                <button class="button city-buttons has-text-centered is-outlined" id="button-ten"></button> -->
+                
             </aside>
 
 
@@ -46,6 +53,7 @@
             <div class="column is-bordered">
                 <div id="todays-city">
                     <h1 id="city-name-date" class="is-size-3 has-text-weight-bold ml-2"></h1>
+                    <h1 id ="icon"></h1>
                     <p id="today-temp" class="my-2 ml-2"></p>
                     <p id="today-wind" class="my-2 ml-2"></p>
                     <p id="today-humid" class="my-2 ml-2"></p>
@@ -54,36 +62,36 @@
 
 
                 <h3 class="column is-size-3 mt-2">5-Day Forecast</h3>
-                <div class="columns box-wrapper">
+                <div class="columns">
                     <div class="box column mr-1" id="box1">
-                        <h2 class="is-size-4">Date</h2>
-                        <p>Temp</p>
-                        <p>Wind</p>
-                        <p>Humidity</p>
+                        <h2 class="is-size-4" id="day-box1"></h2>
+                        <p id="temp1"></p>
+                        <p id="wind1"></p>
+                        <p id="humid1"></p>
                     </div>
                     <div class="box column mr-1" id="box2">
-                        <h2 class="is-size-4">Date</h2>
-                        <p>Temp</p>
-                        <p>Wind</p>
-                        <p>Humidity</p>
+                        <h2 class="is-size-4" id="day-box2"></h2>
+                        <p id="temp2"></p>
+                        <p id="wind2"></p>
+                        <p id="humid2"></p>
                     </div>
                     <div class="box column mr-1" id="box3">
-                        <h2 class="is-size-4">Date</h2>
-                        <p>Temp</p>
-                        <p>Wind</p>
-                        <p>Humidity</p>
+                        <h2 class="is-size-4" id="day-box3"></h2>
+                        <p id="temp3"></p>
+                        <p id="wind3"></p>
+                        <p id="humid3"></p>
                     </div>
                     <div class="box column mr-1" id="box4">
-                        <h2 class="is-size-4">Date</h2>
-                        <p>Temp</p>
-                        <p>Wind</p>
-                        <p>Humidity</p>
+                        <h2 class="is-size-4" id="day-box4"></h2>
+                        <p id="temp4"></p>
+                        <p id="wind4"></p>
+                        <p id="humid4"></p>
                     </div>
                     <div class="box column mr-1" id="box5">
-                        <h2 class="is-size-4">Date</h2>
-                        <p>Temp</p>
-                        <p>Wind</p>
-                        <p>Humidity</p>
+                        <h2 class="is-size-4" id="day-box5"></h2>
+                        <p id="temp5"></p>
+                        <p id="wind5"></p>
+                        <p id="humid5"></p>
                     </div>
                 </div>
 
