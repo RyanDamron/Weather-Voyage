@@ -3,6 +3,7 @@ var city;
 var number = 0;
 var searchBar = document.getElementById('search-bar');
 var searchButton = document.getElementById("search-button");
+var buttonList = document.getElementById('button');
 searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     var inputCity = document.getElementById("user-input").value;
@@ -11,6 +12,11 @@ searchButton.addEventListener("click", function (event) {
 
     getCity();
 });
+if (localStorage.getItem("City")){
+    getCity();
+};
+
+
 
 function getCity() {
     var cityName = localStorage.getItem("City");
@@ -43,8 +49,10 @@ function getCity() {
 
         function cityButton() {
             var buttonText = JSON.parse(localStorage.getItem('city'));
-           
             var newButton = document.createElement('button');
+         
+
+         
             newButton.setAttribute('class', 'button');
             newButton.setAttribute('class', 'city-buttons');
             newButton.setAttribute('class', 'has-text-centered');
@@ -54,11 +62,18 @@ function getCity() {
             newButton.textContent = buttonText;
             localStorage.setItem('button', JSON.stringify(buttonText));
             searchBar.appendChild(newButton);
-
+        
+        
+        
+           
             todayWeather();
+           
         }
    
+    // function previousCities ();
+    //     if (localStorage.getItem('city')) {
 
+    //     }
     function todayWeather() {
         // var weatherIcon = JSON.parse(localStorage.getItem('icon'));
         // var iconUrl = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
