@@ -2,19 +2,64 @@ var apiKey = "aacdfb2450cba7482203e8b3fcc7ea78";
 var city;
 var number = 0;
 var searchBar = document.getElementById('search-bar');
-var searchButton = document.getElementById("search-button");
-var buttonList = document.getElementById('button');
+var searchButton = document.getElementById("search-btn");
+var buttonList = document.querySelectorAll('city-buttons');
 searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     var inputCity = document.getElementById("user-input").value;
     console.log("City: " + inputCity);
     localStorage.setItem("City", inputCity);
 
-    getCity();
+    getCity(inputCity);
 });
 if (localStorage.getItem("City")){
     getCity();
 };
+
+searchBar.addEventListener('click', function(e) {
+    if(e.target.classList.contains('city-buttons')) {
+    var cityBtn = e.target.innerHTML;
+    console.log("City button: " + cityBtn);
+    localStorage.setItem('City', cityBtn);
+    getCity(cityBtn);
+}
+
+    
+
+// function btnWeather() {
+//     // var weatherIcon = JSON.parse(localStorage.getItem('icon'));
+//     // var iconUrl = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
+//     // var icon = document.getElementById('icon');
+//     // icon.innerHTML = iconUrl;
+    
+//     // var todaysCity = document.getElementById('button');
+//     date = dayjs().format('MMMM DD, YYYY');
+//     cityBtn = city + ' (' + date + ')';
+    
+//     var todayTemp = document.getElementById("today-temp");
+//     var tempConvert = (1.8 * (temp - 273) + 32)
+//     var tempDecimal = Math.trunc(tempConvert);
+//     todayTemp.innerHTML = "Temperature: " + tempDecimal + "°F";
+    
+//     var todayWind = document.getElementById('today-wind');
+//     var windConvert = wind * 0.6214;
+//     var windDecimal = Math.trunc(windConvert);
+//     todayWind.innerHTML = "Wind: " + windDecimal + " mph";
+    
+//     var todayHumid = document.getElementById('today-humid');
+//     todayHumid.innerHTML = "Humidity: " + humid + " %";
+    
+//     localStorage.setItem('city', JSON.stringify(city));
+    
+// };
+
+});
+
+// };
+    
+
+
+
 
 
 
@@ -49,26 +94,33 @@ function getCity() {
 
         function cityButton() {
             var buttonText = JSON.parse(localStorage.getItem('city'));
-            var newButton = document.createElement('button');
-         
-
-         
-            newButton.setAttribute('class', 'button');
-            newButton.setAttribute('class', 'city-buttons');
-            newButton.setAttribute('class', 'has-text-centered');
-            newButton.setAttribute('class', 'is-outlined');
-            newButton.setAttribute('id', 'button');
-            newButton.setAttribute('font-family', 'Roboto Slab', 'serif');
-            newButton.textContent = buttonText;
-            localStorage.setItem('button', JSON.stringify(buttonText));
-            searchBar.appendChild(newButton);
-        
-        
-        
-           
-            todayWeather();
-           
-        }
+            var existingButtons = document.querySelectorAll('#button');
+            
+            // Check if a button with the same text content already exists
+            var isExistingButton = Array.from(existingButtons).some(function(button) {
+              return button.textContent === buttonText;
+            });
+          
+            if (isExistingButton) {
+              // Button already exists, do nothing
+              todayWeather();
+            } else {
+              // Create a new button
+              var newButton = document.createElement('button');
+              newButton.setAttribute('class', 'button city-buttons has-text-centered is-outlined');
+              newButton.setAttribute('id', 'button');
+              newButton.setAttribute('font-family', 'Roboto Slab', 'serif');
+              newButton.textContent = buttonText;
+          
+              // Save button text to localStorage
+              localStorage.setItem('button', JSON.stringify(buttonText));
+          
+              // Append the new button to the page
+              searchBar.appendChild(newButton);
+          
+              todayWeather();
+            }
+          }
    
     // function previousCities ();
     //     if (localStorage.getItem('city')) {

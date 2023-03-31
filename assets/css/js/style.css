@@ -1,5 +1,5 @@
-#todays-city {
-    margin-bottom: 1em;
+* {
+    font-family: 'Roboto Slab', serif;
 }
 
 :root {
@@ -18,53 +18,47 @@
     border-color: var(--darkblue);
 }
 
-#box1 {
-  
+.columns .box {
     background-color: var(--yellow);
+    min-height: 25vh;
 }
 
-#box2 {
-  
-    background-color: var(--yellow);
-}
 
-#box3 {
-
-    background-color: var(--yellow);
-}
-
-#box4 {
-    
-    background-color: var(--yellow);
-}
 
 #box5 {
     margin: 0px 0px 24px;
     background-color: var(--yellow);
-}
+} */
 
-
-
-#search-button {
-    margin-top: 2px;
-    color: white;
-    background-color: var(--darkblue);
+#search-area .button {
+    margin-top: 1vh;
+    color: white !important;
+    background-color: var(--darkblue) !important;
 }
 
 #todays-city {
     border: solid;
     border-color: var(--darkblue);
+    color: white;
+    background-color: var(--blue);
     border-width: 1%;
-    border-radius: 10px;
+    border-radius: 20px;
+    min-height: 30vh;
+    margin-bottom: 1em;
 }
 
-* {
-    font-family: 'Roboto Slab', serif;
+#city-name-date:empty {
+    content: attr(data-placeholder);
 }
 
-.button {
-    font-family: 'Roboto Slab', serif;
+[id^='button'] {
+    color: var(--darkblue);
+    background-color: var(--lightblue);
 }
+
+/* .button {
+    font-family: 'Roboto Slab', serif;
+} */
 
 #button {
     font-family: 'Roboto Slab', serif;
@@ -72,7 +66,7 @@
     background-color: var(--lightblue);
 }
 
-#button-one {
+/* #button-one {
     color: var(--darkblue);
     background-color: var(--lightblue);
 }
@@ -112,9 +106,9 @@
 #button-ten {
     color: var(--darkblue);
     background-color: var(--lightblue);
-}
+} */
 
 #header {
-    background-color: var(--blue);
+    background-color: var(--darkblue);
     color: white;
 }
