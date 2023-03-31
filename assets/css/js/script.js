@@ -28,7 +28,6 @@ var buttonList = document.querySelectorAll('city-buttons');
 searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     var inputCity = document.getElementById("user-input").value;
-    console.log("City: " + inputCity);
     localStorage.setItem("City", inputCity);
 
     getCity(inputCity);
@@ -40,7 +39,6 @@ if (localStorage.getItem("City")){
 searchBar.addEventListener('click', function(e) {
     if(e.target.classList.contains('city-buttons')) {
     var cityBtn = e.target.innerHTML;
-    console.log("City button: " + cityBtn);
     localStorage.setItem('City', cityBtn);
     getCity(cityBtn);
 }
@@ -56,7 +54,6 @@ function getCity() {
 
         })
         .then(function (data) {
-            console.log(data);
             city = data.name;
             temp = data.main.temp;
             wind = data.wind.speed
@@ -64,7 +61,6 @@ function getCity() {
             lat = data.coord.lat;
             lon = data.coord.lon;
             icon = data.weather[0].icon
-            console.log('lat: ' + lat + ' lon: ' + lon)
             localStorage.setItem('lat', JSON.stringify(lat));
             localStorage.setItem('lon', JSON.stringify(lon));
             localStorage.setItem('temp', JSON.stringify(temp));
@@ -108,7 +104,6 @@ function getCity() {
         var todaysCity = document.getElementById('city-name-date');
         date = dayjs().format('MMMM DD, YYYY');
         todaysCity.innerHTML = city + ' (' + date + ')' + icons[weatherIcon];
-        console.log(weatherIcon);
 
 
         var todayTemp = document.getElementById("today-temp");
@@ -135,14 +130,12 @@ function getLatLon() {
     var lat = JSON.parse(localStorage.getItem('lat'));
     var lon = JSON.parse(localStorage.getItem('lon'));
 
-    console.log('lat ' + lat + ' lon ' + lon)
     var fiveDayApi = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + '&lon=' + lon + '&appid=' + weatherKey;
     fetch(fiveDayApi)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data)
             localStorage.setItem('list', JSON.stringify(data.list));
         });
     makeCards();
@@ -150,16 +143,8 @@ function getLatLon() {
 var dayBox = document.getElementsByClassName('day-box');
 function makeCards() {
     var dayList = JSON.parse(localStorage.getItem('list'));
-    console.log(dayList);
-    var dayTemp = dayList[number].main.temp_max;
-    var dayWind = dayList[number].wind.speed;
-    var dayHumid = dayList[number].main.humidity;
-    console.log(dayTemp)
-    console.log(dayWind)
-    console.log(dayHumid)
 
     for (var i = 0; i < 5; i++) {
-        console.log(dayList[i]);
         var tempOne = document.getElementById('temp1');
         var tempTwo = document.getElementById('temp2');
         var tempThree = document.getElementById('temp3');
